@@ -1,0 +1,36 @@
+{
+	"name": "nios-scriptable-wrapper",
+	"version": "1.0.0",
+	"description": "A node package that emulates iOS Scriptable's JS compiler for widgets and scripts.",
+	"main": "src/index.js",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./lib/index.d.ts",
+				"default": "./lib/index.js"
+			}
+		}
+	},
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"build": "rimraf lib && tsc"
+	},
+	"author": "SkinnyDevi",
+	"license": "ISC",
+	"devDependencies": {
+		"rimraf": "^5.0.0",
+		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"buffer": "^6.0.3",
+		"nios-scriptable": "^0.9.1"
+	},
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"keywords": []
+}
